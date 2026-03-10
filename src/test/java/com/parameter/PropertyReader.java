@@ -1,0 +1,19 @@
+package com.parameter;
+
+import java.io.FileInputStream;
+import java.util.Properties;
+
+public class PropertyReader {
+
+	public static Properties loadPropertiesOfxFile() {
+		Properties prop=  new Properties();
+		try {
+			FileInputStream fs= new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//property.properties");
+			prop.load(fs);	
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return prop;
+	}
+}

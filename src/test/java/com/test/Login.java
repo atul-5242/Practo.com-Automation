@@ -8,6 +8,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.pages.LoginPage;
+import com.parameter.DataProviders;
 import com.setup.BaseSteps;
 
 
@@ -26,12 +27,11 @@ public class Login extends BaseSteps{
 			driver.quit();
 		}
 		
-		@Test(priority=1,dataProvider = "loginCredentialSupplier",dataProviderClass =DataProvider.class)
+		@Test(priority=1,dataProvider = "loginCredentialSupplier",dataProviderClass =DataProviders.class)
 		public  void LoginWithValidCredentials(String mobileNumber,String password){
 			loginPage = new LoginPage(driver);
-//			login.enterEmail(prop.getProperty("validEmail"));
+			loginPage.LoginButtoOfProfileAndSignup();
 			loginPage.enterMobileNumber(mobileNumber);
-//			login.enterPassword(prop.getProperty("validPassword"));
 			loginPage.enterPassword(password);
 			loginPage.clickOnLoginButton();
 			Assert.assertEquals(loginPage.getNameOfUser(),"Atul Maurya");

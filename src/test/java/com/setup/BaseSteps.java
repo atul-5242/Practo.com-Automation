@@ -8,7 +8,12 @@ import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import com.pages.EditProfilePage;
+import com.pages.HealthQueriesPage;
 import com.pages.LoginPage;
+import com.pages.SettingPageChangePassword;
+import com.pages.SettingPageNotification;
+import com.pages.VideoConsultPage;
 import com.parameter.PropertyReader;
 
 
@@ -17,9 +22,13 @@ public class BaseSteps {
 
 		public Properties prop;
 		WebDriver driver;
-//		public HomePage homePage;
 		public LoginPage loginPage;
-
+		public SettingPageChangePassword settingPagePassword;
+		public SettingPageNotification settingNotification;
+		public VideoConsultPage videoConsult;
+		public HealthQueriesPage healthQueries;
+		public EditProfilePage editProfile;
+		
 		
 		public WebDriver openBrowserAndApplication() {
 			

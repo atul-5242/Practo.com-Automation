@@ -6,7 +6,7 @@ public class DataProviders {
 
 	@DataProvider(name="loginCredentialSupplier")
 	public Object[][] supplyAccountCredentials(){
-		Object[][] data = {{"6306128371","Atul88772@"}};
+		Object[][] data = {{"6398330350","Atul8872@"}};
 		return data;
 	}
 }

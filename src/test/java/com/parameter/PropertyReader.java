@@ -10,8 +10,10 @@ public class PropertyReader {
 		try {
 			FileInputStream fs= new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//property.properties");
 			prop.load(fs);	
+			fs.close();
 		}
 		catch (Exception e) {
+			System.err.println("Error loading property file: " + e.getMessage());
 			e.printStackTrace();
 		}
 		return prop;

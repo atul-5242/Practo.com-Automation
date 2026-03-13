@@ -88,7 +88,7 @@ public class PaymentPage extends BasePage {
 	private WebElement NameOnCard;
 	
 	
-	@FindBy(xpath="//input[@id='valid-upto']")
+	@FindBy(css="#valid-upto")
 	private WebElement vaildUpto;
 	
 	@FindBy(xpath="//input[@id='cvv']")
@@ -102,19 +102,19 @@ public class PaymentPage extends BasePage {
 		elementUtils.clickOnElement(PayNowField);
 	}
 	
-	public void EnterOnCVVField() {		
-		elementUtils.clickOnElement(CVVField);
+	public void EnterOnCVVField(String cvvField) {		
+		elementUtils.eneterTextIntoElement(CVVField,cvvField);
 	}
 	
-	public void EnterOnvaildUpto() {		
-		elementUtils.clickOnElement(vaildUpto);
+	public void EnterOnvaildUpto(String vaildDate) {		
+		elementUtils.eneterTextIntoElement(vaildUpto,vaildDate);
 	}
-	public void EnterOnNameOnCard() {		
-		elementUtils.clickOnElement(NameOnCard);
+	public void EnterOnNameOnCard(String nameOfCardHolder) {		
+		elementUtils.eneterTextIntoElement(NameOnCard,nameOfCardHolder);
 	}
 	
-	public void EnterOnCardNumber() {		
-		elementUtils.clickOnElement(CardNumber);
+	public void EnterOnCardNumber(String cardNumber) {	
+		elementUtils.eneterTextIntoElement(CardNumber,cardNumber);
 	}
 	
 	
@@ -130,7 +130,7 @@ public class PaymentPage extends BasePage {
 		elementUtils.clickOnElement(IndiaFiledButtonRS);
 	}
 	
-	@FindBy(xpath="//button[@type='button']")
+	@FindBy(xpath="//button[@class='btn btn-raised btn-primary col-xs-12 pay-now__btn--web']")
 	private WebElement PayRSPayment;
 	
 	public void ClickOnPayRS() {		

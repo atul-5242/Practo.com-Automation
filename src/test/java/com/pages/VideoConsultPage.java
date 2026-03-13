@@ -20,7 +20,7 @@ public class VideoConsultPage  extends BasePage{
 
 		PageFactory.initElements(driver, this);
 
-	}
+	}	
 	
 	
 //	Below Locators help to redirect to the payment page:
@@ -51,9 +51,11 @@ public class VideoConsultPage  extends BasePage{
 	
 	
 	public void scrollToRequiredReadMore() {
-		JavascriptExecutor jsdriver=(JavascriptExecutor)driver;
-		WebElement TitleOfHealthQueries= driver.findElement(By.xpath("//h2[normalize-space()='Health Queries']"));
-		jsdriver.executeScript("arguments[0].scrollIntoView(true);",TitleOfHealthQueries);
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+		WebElement readMoreBtn = wait.until(ExpectedConditions.visibilityOf(ReadMoreButtonForHealthQueries));
+		JavascriptExecutor jsdriver = (JavascriptExecutor) driver;
+		jsdriver.executeScript("arguments[0].scrollIntoView(true);", readMoreBtn);
+		wait.until(ExpectedConditions.elementToBeClickable(readMoreBtn));
 	}
 	
 	

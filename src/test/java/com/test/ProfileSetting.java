@@ -19,7 +19,6 @@ public class ProfileSetting extends BaseSteps{
 	@BeforeMethod
 	public void setup() {
 		driver = openBrowserAndApplication();
-
 	}
 	
 	@AfterMethod
@@ -140,15 +139,10 @@ public class ProfileSetting extends BaseSteps{
 		
 		settingNotification.ClickOnSubmitButtonForNotification();
 		
-		
-		
-		
+
 		String msg = settingNotification.waitForSuccessMessage().trim();
 		Assert.assertTrue(msg.contains("Thank you for your feedback"), 
 		                  "Success message mismatch! Actual: " + msg);
-		
-		
-		
 		
 		
 	}

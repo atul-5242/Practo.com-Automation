@@ -11,6 +11,7 @@ import org.openqa.selenium.safari.SafariDriver;
 import com.pages.EditProfilePage;
 import com.pages.HealthQueriesPage;
 import com.pages.LoginPage;
+import com.pages.PaymentPage;
 import com.pages.SettingPageChangePassword;
 import com.pages.SettingPageNotification;
 import com.pages.VideoConsultPage;
@@ -28,11 +29,12 @@ public class BaseSteps {
 		public VideoConsultPage videoConsult;
 		public HealthQueriesPage healthQueries;
 		public EditProfilePage editProfile;
+		public PaymentPage paymentStep;
 		
 		
 		public WebDriver openBrowserAndApplication() {
 			
-			prop = PropertyReader.loadPropertiesOfxFile();
+			prop = PropertyReader.loadPropertiesOfFile();
 			String browser = prop.getProperty("browser");
 			
 			if (browser.equalsIgnoreCase("chrome")) {

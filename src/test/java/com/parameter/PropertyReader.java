@@ -5,7 +5,7 @@ import java.util.Properties;
 
 public class PropertyReader {
 
-	public static Properties loadPropertiesOfxFile() {
+	public static Properties loadPropertiesOfFile() {
 		Properties prop=  new Properties();
 		try {
 			FileInputStream fs= new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//property.properties");

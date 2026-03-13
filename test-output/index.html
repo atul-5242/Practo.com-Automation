@@ -50,7 +50,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Default_suite" class="navigator-link ">
-                    <span>C:\Users\atmaurya\AppData\Local\Temp\testng-eclipse-626305473\testng-customsuite.xml</span>
+                    <span>C:\Users\atmaurya\AppData\Local\Temp\testng-eclipse--1636720713\testng-customsuite.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -103,7 +103,7 @@
                     <div class="method-list-content failed suite-Default_suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Default_suite" title="com.test.HealthQueriesArticles" class="method navigator-link" hash-for-method="SearchHealthQueries(6398330350, Atul8872@)">SearchHealthQueries(6398330350, Atul8872@)</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Default_suite" title="com.test.TagBaseSearch" class="method navigator-link" hash-for-method="SearchHealthQueries(6398330350, Atul8872@)">SearchHealthQueries(6398330350, Atul8872@)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Default_suite -->
@@ -121,7 +121,7 @@
           <div class="suite-Default_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">com.test.HealthQueriesArticles</span>
+              <span class="class-name">com.test.TagBaseSearch</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
@@ -130,15 +130,16 @@
                   </a> <!-- SearchHealthQueries(6398330350, Atul8872@) -->
                   <span class="method-name">SearchHealthQueries</span>
                   <span class="parameters">(6398330350,Atul8872@)</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element is not clickable at point (218, 4303)
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
   (Session info: chrome=145.0.7632.160)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#staleelementreferenceexception
 Build info: version: &apos;4.40.0&apos;, revision: &apos;b3333f1&apos;
 System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.17&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [40b1e9f4f7871961f0eeb40198a02594, clickElement {id=f.431035DF17FFF874FB6525CD057484B1.d.6AD72F47FB59E3F56B786AAE65941BF3.e.82}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\atmaurya\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:55608}, goog:processID: 3572, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:55608/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (40b1e9f4f7871961f0eeb40198a02594)] -&gt; xpath: (//a[@class=&apos;link health-query__link&apos;])[1]]
-Session ID: 40b1e9f4f7871961f0eeb40198a02594
+Command: [84fab089353301ef1cc6c20373f5f486, isElementDisplayed {id=f.7C56B79E1309F00F1F18128E714AEE53.d.70B12F1143347B1B6EFF3DC0E780A310.e.50}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.160, chrome: {chromedriverVersion: 145.0.7632.117 (de4e5d6e13b..., userDataDir: C:\Users\atmaurya\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56992}, goog:processID: 34984, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56992/devtoo..., se:cdpVersion: 145.0.7632.160, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (84fab089353301ef1cc6c20373f5f486)] -&gt; xpath: //div[@class=&apos;product-tab__title&apos;][normalize-space()=&apos;Video Consult&apos;]]
+Session ID: 84fab089353301ef1cc6c20373f5f486
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:169)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:142)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -147,16 +148,16 @@ Session ID: 40b1e9f4f7871961f0eeb40198a02594
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.click(Unknown Source)
-	at com.utils.ElementUtils.clickOnElement(ElementUtils.java:18)
-	at com.pages.VideoConsultPage.ClickOnReadMoreButtonForHealthQueries(VideoConsultPage.java:62)
-	at com.test.HealthQueriesArticles.SearchHealthQueries(HealthQueriesArticles.java:50)
+	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
+	at com.utils.ElementUtils.clickOnElement(ElementUtils.java:17)
+	at com.pages.VideoConsultPage.ClickOnVideoConsultButton(VideoConsultPage.java:32)
+	at com.test.TagBaseSearch.SearchHealthQueries(TagBaseSearch.java:41)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -194,7 +195,7 @@ Session ID: 40b1e9f4f7871961f0eeb40198a02594
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\atmaurya\AppData\Local\Temp\testng-eclipse-626305473\testng-customsuite.xml</span>
+            <span class="header-content">C:\Users\atmaurya\AppData\Local\Temp\testng-eclipse--1636720713\testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -203,11 +204,11 @@ Session ID: 40b1e9f4f7871961f0eeb40198a02594
 &lt;suite name=&quot;Default suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Default test&quot; verbose=&quot;2&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.test.HealthQueriesArticles&quot;&gt;
+      &lt;class name=&quot;com.test.TagBaseSearch&quot;&gt;
         &lt;methods&gt;
           &lt;include name=&quot;SearchHealthQueries&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.test.HealthQueriesArticles --&gt;
+      &lt;/class&gt; &lt;!-- com.test.TagBaseSearch --&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Default test --&gt;
 &lt;/suite&gt; &lt;!-- Default suite --&gt;
@@ -250,13 +251,13 @@ data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'SearchHealthQueries')
-data.setCell(0, 2, 'com.test.HealthQueriesArticles')
-data.setCell(0, 3, 12205);
+data.setCell(0, 2, 'com.test.TagBaseSearch')
+data.setCell(0, 3, 4239);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 12 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Default_suite">
               </div> <!-- times-div-Default_suite -->
             </div> <!-- times-div -->
@@ -282,7 +283,7 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.test.HealthQueriesArticles</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">com.test.TagBaseSearch</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
                 <span class="method-name">setup</span>
                 <span class="method-start">0 ms</span>
@@ -291,11 +292,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">SearchHealthQueries(6398330350, Atul8872@)</span>
-                <span class="method-start">5394 ms</span>
+                <span class="method-start">4732 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closure</span>
-                <span class="method-start">17607 ms</span>
+                <span class="method-start">8975 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

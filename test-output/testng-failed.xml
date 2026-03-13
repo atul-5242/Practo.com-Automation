@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.test.HealthQueriesArticles">
+      <class name="com.test.TagBaseSearch">
         <methods>
+          <include name="SearchHealthQueries" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="closure"/>
-          <include name="SearchHealthQueries" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.test.HealthQueriesArticles -->
+      </class> <!-- com.test.TagBaseSearch -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

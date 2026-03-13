@@ -11,8 +11,7 @@ import com.pages.VideoConsultPage;
 import com.parameter.DataProviders;
 import com.setup.BaseSteps;
 
-public class HealthQueriesArticles extends BaseSteps{
-	
+public class TagBaseSearch extends BaseSteps{
 	public WebDriver driver;
 
 	@BeforeMethod
@@ -25,7 +24,6 @@ public class HealthQueriesArticles extends BaseSteps{
 	public void closure() {
 		driver.quit();
 	}
-	
 	
 	@Test(priority=1,dataProvider = "loginCredentialSupplier",dataProviderClass = DataProviders.class)
 	public void SearchHealthQueries(String mobileNumber,String password) throws InterruptedException{
@@ -44,27 +42,30 @@ public class HealthQueriesArticles extends BaseSteps{
 		
 		videoConsult.scrollToRequiredReadMore();
 		
-		Thread.sleep(10000);
+		Thread.sleep(2000);
 		
 		videoConsult.ClickOnReadMoreButtonForHealthQueries();
 		
 		// initialize healthQueries page object after navigation to health queries section/page
 		healthQueries = new com.pages.HealthQueriesPage(driver);
+
 		healthQueries.EnterSearchQuery("Heart");
 		
-	
+		
 		healthQueries.ClickSearchInInput();
 		
+		healthQueries.scrollToRequiredBrainTag();
 		
+		healthQueries.ClickOnTagBrain();
 		
+		Thread.sleep(5000);
 
 		Assert.assertTrue(
 				healthQueries.getMessageOfSuccessSearch().contains("Recently Answered Questions on"),
 		    "Success message text mismatch!"
+		
 		);
 
 	}
-	
-	
 	
 }

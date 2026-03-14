@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.Parameters;
 
 import com.pages.EditProfilePage;
 import com.pages.HealthQueriesPage;
@@ -23,15 +24,10 @@ public class BaseSteps {
 
 		public Properties prop;
 		WebDriver driver;
-		public LoginPage loginPage;
-		public SettingPageChangePassword settingPagePassword;
-		public SettingPageNotification settingNotification;
-		public VideoConsultPage videoConsult;
-		public HealthQueriesPage healthQueries;
-		public EditProfilePage editProfile;
-		public PaymentPage paymentStep;
 		
 		
+//		@Parameters("browser")
+//		public WebDriver openApplication(String browser) {
 		public WebDriver openBrowserAndApplication() {
 			
 			prop = PropertyReader.loadPropertiesOfFile();

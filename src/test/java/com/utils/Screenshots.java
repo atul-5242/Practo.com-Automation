@@ -13,7 +13,7 @@ public class Screenshots {
 	public static String takeScreenshot(WebDriver driver,String testName) {
 		TakesScreenshot ts = (TakesScreenshot)driver;
 		File srcScreenshot = ts.getScreenshotAs(OutputType.FILE);
-		String screenshotPath = System.getProperty("user.dir")+"\\Screenshot\\"+testName+".png";
+		String screenshotPath = System.getProperty("user.dir")+"\\target\\Extent Report\\Screenshots\\"+testName+".png";
 		try {
 			FileHandler.copy(srcScreenshot,new File(screenshotPath));
 		} catch (IOException e) {

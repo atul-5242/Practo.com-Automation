@@ -9,32 +9,19 @@ import org.testng.annotations.Test;
 import com.pages.LoginPage;
 import com.pages.VideoConsultPage;
 import com.parameter.DataProviders;
+import com.parameter.ExcelReader;
 import com.setup.BaseSteps;
+import com.setup.Hooks;
 
-public class TagBaseSearch extends BaseSteps{
-	public WebDriver driver;
-
-	@BeforeMethod
-	public void setup() {
-		driver = openBrowserAndApplication();
-
-	}
+public class TagBaseSearch extends Hooks{
 	
-	@AfterMethod
-	public void closure() {
-		driver.quit();
-	}
 	
-	@Test(priority=1,dataProvider = "loginCredentialSupplier",dataProviderClass = DataProviders.class)
-	public void SearchHealthQueries(String mobileNumber,String password) throws InterruptedException{
+	@Test(priority=1)
+	public void SearchHealthQueries() throws InterruptedException{
 		
 //		======================================    ==================================
 		
-		loginPage = new LoginPage(driver);
-		loginPage.LoginButtoOfProfileAndSignup();
-		loginPage.enterMobileNumber(mobileNumber);
-		loginPage.enterPassword("Atul6651@");
-		loginPage.clickOnLoginButton();
+		String tag = ExcelReader.getValueByKey("Sheet1","tag");
 			
 		videoConsult = new VideoConsultPage(driver);
 		
@@ -49,7 +36,7 @@ public class TagBaseSearch extends BaseSteps{
 		// initialize healthQueries page object after navigation to health queries section/page
 		healthQueries = new com.pages.HealthQueriesPage(driver);
 
-		healthQueries.EnterSearchQuery("Heart");
+		healthQueries.EnterSearchQuery(tag);
 		
 		
 		healthQueries.ClickSearchInInput();
@@ -61,7 +48,7 @@ public class TagBaseSearch extends BaseSteps{
 		Thread.sleep(5000);
 
 		Assert.assertTrue(
-				healthQueries.getMessageOfSuccessSearch().contains("Recently Answered Questions on"),
+				healthQueries.getMessageOfSuccessSearch().contains("Brain and Spine Problems"),
 		    "Success message text mismatch!"
 		
 		);

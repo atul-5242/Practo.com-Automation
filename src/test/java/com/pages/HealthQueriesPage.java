@@ -51,6 +51,16 @@ public class HealthQueriesPage extends BasePage {
 		return elementUtils.getTextFromElemet(HeadingVerifyValidSearch);
 	}
 	
+	
+	
+	@FindBy(xpath="//p[@class='head']")
+	private WebElement HeadingVerifyInValidSearch;
+	
+	
+	public String getMessageOfFaliureSearch() {
+		return elementUtils.getTextFromElemet(HeadingVerifyInValidSearch);
+	}
+	
 	@FindBy(xpath="//a[normalize-space()='Brain and Spine']")
 	private WebElement TagsOfBrainAndSpineButton;
 	

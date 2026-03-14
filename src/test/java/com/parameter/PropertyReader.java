@@ -8,7 +8,7 @@ public class PropertyReader {
 	public static Properties loadPropertiesOfFile() {
 		Properties prop=  new Properties();
 		try {
-			FileInputStream fs= new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//property.properties");
+			FileInputStream fs= new FileInputStream(System.getProperty("user.dir")+"//src//test//resources//PropertyData//property.properties");
 			prop.load(fs);	
 			fs.close();
 		}

@@ -22,7 +22,6 @@ public class VideoConsultPage  extends BasePage{
 
 	}	
 	
-	
 //	Below Locators help to redirect to the payment page:
 
 	@FindBy(xpath="//div[@class='product-tab__title'][normalize-space()='Video Consult']")

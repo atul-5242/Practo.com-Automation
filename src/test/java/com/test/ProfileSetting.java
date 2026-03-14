@@ -11,52 +11,43 @@ import com.pages.LoginPage;
 import com.pages.SettingPageChangePassword;
 import com.pages.SettingPageNotification;
 import com.parameter.DataProviders;
+import com.parameter.ExcelReader;
 import com.setup.BaseSteps;
+import com.setup.Hooks;
 
-public class ProfileSetting extends BaseSteps{
-	public WebDriver driver;
-
-	@BeforeMethod
-	public void setup() {
-		driver = openBrowserAndApplication();
-	}
+public class ProfileSetting extends Hooks{
 	
-	@AfterMethod
-	public void closure() {
-		driver.quit();
-	}
-	
-	@Test(priority=1,dataProvider = "loginCredentialSupplier",dataProviderClass = DataProviders.class)
-	public  void ChangePassowrd(String mobileNumber,String password) throws InterruptedException{
-		
-//		======================================  Change Password  ==================================
-		
-		loginPage = new LoginPage(driver);
-		loginPage.LoginButtoOfProfileAndSignup();
-		loginPage.enterMobileNumber(mobileNumber);
-		loginPage.enterPassword("Atul6651@");
-		loginPage.clickOnLoginButton();
-	
-		editProfile = new EditProfilePage(driver);	
-		editProfile.ClickProfileProfilePicOfMainPage();
-		Thread.sleep(1000);
-		editProfile.ClickOnSettingButton();
-//		editProfile.ClickEditProfilePicOfEditPage();
-		
-		settingPagePassword = new SettingPageChangePassword(driver);
-		settingPagePassword.EnterCurrentPasswordText("Atul6651@");
-		settingPagePassword.EnterConfirmPasswordText("Atul6652@");
-		settingPagePassword.EnterNewPasswordText("Atul6651@");
-		
-		settingPagePassword.ClickOnConfirmPasswordButton();
-		
-
-		Assert.assertTrue(
-		    settingPagePassword.getTheSuccessMesssageOfPassword().contains("Password updated successfully"),
-		    "Success message text mismatch!"
-		);
-
-	}
+//	@Test(priority=1,dataProvider = "loginCredentialSupplier",dataProviderClass = DataProviders.class)
+//	public  void ChangePassowrd(String mobileNumber,String password) throws InterruptedException{
+//		
+////		======================================  Change Password  ==================================
+//		
+//		loginPage = new LoginPage(driver);
+//		loginPage.LoginButtoOfProfileAndSignup();
+//		loginPage.enterMobileNumber(mobileNumber);
+//		loginPage.enterPassword("Atul6651@");
+//		loginPage.clickOnLoginButton();
+//	
+//		editProfile = new EditProfilePage(driver);	
+//		editProfile.ClickProfileProfilePicOfMainPage();
+//		Thread.sleep(1000);
+//		editProfile.ClickOnSettingButton();
+////		editProfile.ClickEditProfilePicOfEditPage();
+//		
+//		settingPagePassword = new SettingPageChangePassword(driver);
+//		settingPagePassword.EnterCurrentPasswordText("Atul6651@");
+//		settingPagePassword.EnterConfirmPasswordText("Atul6652@");
+//		settingPagePassword.EnterNewPasswordText("Atul6651@");
+//		
+//		settingPagePassword.ClickOnConfirmPasswordButton();
+//		
+//
+//		Assert.assertTrue(
+//		    settingPagePassword.getTheSuccessMesssageOfPassword().contains("Password updated successfully"),
+//		    "Success message text mismatch!"
+//		);
+//
+//	}
 	
 	
 	
@@ -65,29 +56,26 @@ public class ProfileSetting extends BaseSteps{
 	
 	
 //	================================  Update Profile  ==================================
-	@Test(priority=2,dataProvider = "loginCredentialSupplier",dataProviderClass = DataProviders.class)
-	public  void UpdateProfileDetails(String mobileNumber,String password) throws InterruptedException{
+	@Test(priority=2)
+	public  void UpdateProfileDetails() throws InterruptedException{
 		
 		
 //		======================================    ==================================
 		
+		String HomeAddress = ExcelReader.getValueByKey("Sheet1","HomeAddress");
+		String Colony = ExcelReader.getValueByKey("Sheet1","Colony");
+		String City = ExcelReader.getValueByKey("Sheet1","City");
 		
 		
-		loginPage = new LoginPage(driver);
-		loginPage.LoginButtoOfProfileAndSignup();
-		loginPage.enterMobileNumber(mobileNumber);
-		loginPage.enterPassword("Atul6651@");
-		loginPage.clickOnLoginButton();
-	
 		editProfile = new EditProfilePage(driver);	
 		editProfile.ClickProfileProfilePicOfMainPage();
 		
 		Thread.sleep(1000);
 		
 		editProfile.ClickViewAndUpdateProfileButton();
-		editProfile.EnterHomeAddressInput("Delhi");
-		editProfile.EnterColonyInput("New York");
-		editProfile.EnterCityInput("Lko");
+		editProfile.EnterHomeAddressInput(HomeAddress);
+		editProfile.EnterColonyInput(Colony);
+		editProfile.EnterCityInput(City);
 		
 		
 		
@@ -108,19 +96,15 @@ public class ProfileSetting extends BaseSteps{
 
 	
 //	================================  Update Profile  ==================================
-	@Test(priority=3,dataProvider = "loginCredentialSupplier",dataProviderClass = DataProviders.class)
-	public  void NotificationPreferenceChange(String mobileNumber,String password) throws InterruptedException{
+	
+	@Test(priority=1)
+	public  void NotificationPreferenceChange() throws InterruptedException{
 		
 		
 //		======================================    ==================================
 		
 		
 		
-		loginPage = new LoginPage(driver);
-		loginPage.LoginButtoOfProfileAndSignup();
-		loginPage.enterMobileNumber(mobileNumber);
-		loginPage.enterPassword("Atul6651@");
-		loginPage.clickOnLoginButton();
 	
 		editProfile = new EditProfilePage(driver);	
 		editProfile.ClickProfileProfilePicOfMainPage();

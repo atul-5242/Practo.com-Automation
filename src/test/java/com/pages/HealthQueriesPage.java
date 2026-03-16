@@ -42,16 +42,12 @@ public class HealthQueriesPage extends BasePage {
 		actions.moveToElement(driver.findElement(By.className("do-search-enter-submit"))).sendKeys(Keys.ENTER).perform();
 	}
 	
-	
 	@FindBy(xpath="//h1[@class='feed-header']")
 	private WebElement HeadingVerifyValidSearch;
-	
 	
 	public String getMessageOfSuccessSearch() {
 		return elementUtils.getTextFromElemet(HeadingVerifyValidSearch);
 	}
-	
-	
 	
 	@FindBy(xpath="//p[@class='head']")
 	private WebElement HeadingVerifyInValidSearch;
@@ -63,7 +59,6 @@ public class HealthQueriesPage extends BasePage {
 	
 	@FindBy(xpath="//a[normalize-space()='Brain and Spine']")
 	private WebElement TagsOfBrainAndSpineButton;
-	
 	
 	public String ClickTagsOfBrainAndSpineButton() {
 		return elementUtils.getTextFromElemet(TagsOfBrainAndSpineButton);

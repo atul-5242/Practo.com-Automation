@@ -17,9 +17,16 @@ public class TagBaseSearch extends Hooks{
 	
 	
 	@Test(priority=1)
-	public void SearchHealthQueries() throws InterruptedException{
+	public void SearchBasedOnTags() throws InterruptedException{
 		
 //		======================================    ==================================
+		
+		/*
+			Created By : Atul Maurya
+			SME Name : Vineel Kumar, Manchikatla
+			Test Description : Search by clicking on on tags
+		 */
+		
 		
 		String tag = ExcelReader.getValueByKey("Sheet1","tag");
 			

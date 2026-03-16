@@ -6,8 +6,8 @@
       <class name="com.test.HealthQueriesArticles">
         <methods>
           <include name="closure"/>
+          <include name="InvalidSearchHealthQueries"/>
           <include name="setup"/>
-          <include name="SearchHealthQueries"/>
         </methods>
       </class> <!-- com.test.HealthQueriesArticles -->
     </classes>

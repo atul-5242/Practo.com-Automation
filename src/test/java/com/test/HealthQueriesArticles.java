@@ -15,9 +15,13 @@ public class HealthQueriesArticles extends Hooks{
 	public void SearchHealthQueries() throws InterruptedException{
 		
 		
-//		======================================    ==================================
+//		======================================  Test 1  ==================================
 		
-		
+		/*
+			Created By : Atul Maurya
+			SME Name : Vineel Kumar, Manchikatla
+			Test Description : Search Health Queries With vaild Data.
+		 */
 		String ValidSearchData = ExcelReader.getValueByKey("Sheet1","VaildSearchQuery");
 
 		videoConsult = new VideoConsultPage(driver);
@@ -32,9 +36,8 @@ public class HealthQueriesArticles extends Hooks{
 		
 		healthQueries.ClickSearchInInput();
 		
-		
 		Thread.sleep(2000);
-
+		
 		Assert.assertTrue(
 				healthQueries.getMessageOfSuccessSearch().contains("Recently Answered Questions on"),
 		    "Success message text mismatch!"
@@ -44,8 +47,12 @@ public class HealthQueriesArticles extends Hooks{
 	
 	@Test(priority=2)
 	public void InvalidSearchHealthQueries() throws InterruptedException{
-		
-//		======================================    ======================
+
+		/*
+			Created By : Atul Maurya
+			SME Name : Vineel Kumar, Manchikatla
+			Test Description : Search Health Queries With Invaild Data.
+		 */
 		
 		String InVaildSearchData = ExcelReader.getValueByKey("Sheet1","InVaildSearchQuery");
 		
@@ -59,10 +66,7 @@ public class HealthQueriesArticles extends Hooks{
 		// initialize healthQueries page object after navigation to health queries section/page
 		healthQueries = new com.pages.HealthQueriesPage(driver);
 		healthQueries.EnterSearchQuery(InVaildSearchData);
-		
-	
 		healthQueries.ClickSearchInInput();
-		
 		
 		System.out.print("-----------------------------------"+healthQueries.getMessageOfFaliureSearch());
 		Thread.sleep(2000);
@@ -71,6 +75,4 @@ public class HealthQueriesArticles extends Hooks{
 		    "Success message text mismatch!"
 		);
 	}
-	
-	
 }

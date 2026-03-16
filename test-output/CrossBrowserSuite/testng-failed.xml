@@ -4,11 +4,34 @@
   <test thread-count="3" parallel="tests" name="EdgeTest(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
+      <class name="com.test.ProfileSetting">
+        <methods>
+          <include name="closure"/>
+          <include name="NotificationPreferenceChange"/>
+          <include name="setup"/>
+          <include name="UpdateProfileDetails"/>
+        </methods>
+      </class> <!-- com.test.ProfileSetting -->
+      <class name="com.test.HealthQueriesArticles">
+        <methods>
+          <include name="closure"/>
+          <include name="InvalidSearchHealthQueries"/>
+          <include name="setup"/>
+          <include name="SearchHealthQueries"/>
+        </methods>
+      </class> <!-- com.test.HealthQueriesArticles -->
+      <class name="com.test.TagBaseSearch">
+        <methods>
+          <include name="closure"/>
+          <include name="setup"/>
+          <include name="SearchBasedOnTags"/>
+        </methods>
+      </class> <!-- com.test.TagBaseSearch -->
       <class name="com.test.VideoConsult">
         <methods>
           <include name="closure"/>
-          <include name="VideoConsultToDoctorPayment"/>
           <include name="setup"/>
+          <include name="VideoConsultToDoctorPayment"/>
         </methods>
       </class> <!-- com.test.VideoConsult -->
     </classes>
@@ -21,8 +44,24 @@
           <include name="closure"/>
           <include name="NotificationPreferenceChange"/>
           <include name="setup"/>
+          <include name="UpdateProfileDetails"/>
         </methods>
       </class> <!-- com.test.ProfileSetting -->
+      <class name="com.test.HealthQueriesArticles">
+        <methods>
+          <include name="closure"/>
+          <include name="InvalidSearchHealthQueries"/>
+          <include name="setup"/>
+          <include name="SearchHealthQueries"/>
+        </methods>
+      </class> <!-- com.test.HealthQueriesArticles -->
+      <class name="com.test.TagBaseSearch">
+        <methods>
+          <include name="closure"/>
+          <include name="setup"/>
+          <include name="SearchBasedOnTags"/>
+        </methods>
+      </class> <!-- com.test.TagBaseSearch -->
       <class name="com.test.VideoConsult">
         <methods>
           <include name="closure"/>

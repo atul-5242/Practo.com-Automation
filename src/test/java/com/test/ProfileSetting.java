@@ -1,6 +1,5 @@
 package com.test;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -12,7 +11,6 @@ import com.pages.SettingPageChangePassword;
 import com.pages.SettingPageNotification;
 import com.parameter.DataProviders;
 import com.parameter.ExcelReader;
-import com.setup.BaseSteps;
 import com.setup.Hooks;
 
 public class ProfileSetting extends Hooks{
@@ -22,6 +20,16 @@ public class ProfileSetting extends Hooks{
 //		
 ////		======================================  Change Password  ==================================
 //		
+	
+	
+		/*
+			Created By : Atul Maurya
+			SME Name : Vineel Kumar, Manchikatla
+			Test Description : Change old Password With New Password.
+		 */
+	
+	
+	
 //		loginPage = new LoginPage(driver);
 //		loginPage.LoginButtoOfProfileAndSignup();
 //		loginPage.enterMobileNumber(mobileNumber);
@@ -61,6 +69,14 @@ public class ProfileSetting extends Hooks{
 		
 		
 //		======================================    ==================================
+		
+		
+		/*
+			Created By : Atul Maurya
+			SME Name : Vineel Kumar, Manchikatla
+			Test Description : Update Profile Details Of residence with Valid Data
+		 */
+		
 		
 		String HomeAddress = ExcelReader.getValueByKey("Sheet1","HomeAddress");
 		String Colony = ExcelReader.getValueByKey("Sheet1","Colony");
@@ -103,7 +119,11 @@ public class ProfileSetting extends Hooks{
 		
 //		======================================    ==================================
 		
-		
+		/*
+			Created By : Atul Maurya
+			SME Name : Vineel Kumar, Manchikatla
+			Test Description : Notification Preference change by checkbox click.
+		 */
 		
 	
 		editProfile = new EditProfilePage(driver);	

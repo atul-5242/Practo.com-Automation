@@ -13,12 +13,16 @@ public class VideoConsult extends Hooks {
 
 	
 //	================================  VideoConsultToDoctorPayment  ==================================
-	@Test(priority=1)
-	public  void VideoConsultToDoctorPayment() throws InterruptedException{
+	@Test(priority=1, dataProvider = "cardData", dataProviderClass = DataProviders.class)
+	public  void VideoConsultToDoctorPayment(String cardNumber, String cardHolderName) throws InterruptedException{
 		
 		//		======================================    ==================================
 		
-		
+		/*
+			Created By : Atul Maurya
+			SME Name : Vineel Kumar, Manchikatla
+			Test Description : Video Call Consult To Doctor and trying to do Payment.
+		 */
 		
 		
 		videoConsult = new VideoConsultPage(driver);
@@ -35,8 +39,8 @@ public class VideoConsult extends Hooks {
 		paymentStep.ClickOnContinueButtonOnNewConsult();
 		paymentStep.ClickOnButtonContinueToPayemnt();		
 		
-		paymentStep.EnterOnCardNumber(prop.getProperty("CardNumber"));
-		paymentStep.EnterOnNameOnCard(prop.getProperty("CardHolderName"));
+		paymentStep.EnterOnCardNumber(cardNumber);
+		paymentStep.EnterOnNameOnCard(cardHolderName);
 		paymentStep.EnterOnCVVField(prop.getProperty("EnterCVV"));
 		paymentStep.EnterOnvaildUpto(prop.getProperty("VaildUpto"));
 		

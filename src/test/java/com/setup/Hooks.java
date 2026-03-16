@@ -33,13 +33,11 @@ public class Hooks extends BaseSteps{
 	public void setup() {
 //		driver = openApplication(browser);
 		driver = openBrowserAndApplication();
-		
 		loginPage = new LoginPage(driver);
 		loginPage.LoginButtoOfProfileAndSignup();
 		loginPage.enterMobileNumber(prop.getProperty("MobileNumber"));
 		loginPage.enterPassword(prop.getProperty("CurrPassword"));
 		loginPage.clickOnLoginButton();
-
 	}
 	
 	@AfterMethod

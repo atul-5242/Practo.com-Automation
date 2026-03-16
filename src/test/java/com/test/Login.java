@@ -19,13 +19,20 @@ public class Login extends Hooks{
 		
 		@Test(priority=1,dataProvider = "loginCredentialSupplier",dataProviderClass =DataProviders.class)
 		public  void LoginWithValidCredentials(String mobileNumber,String password){
-			loginPage = new LoginPage(driver);
-			loginPage.LoginButtoOfProfileAndSignup();
-			loginPage.enterMobileNumber(mobileNumber);
-			loginPage.enterPassword(password);
-			loginPage.clickOnLoginButton();
-			Assert.assertEquals(loginPage.getNameOfUser(),"Atul Maurya");
-		}
+			
+			
+			/*
+				Created By : Atul Maurya
+				SME Name : Vineel Kumar, Manchikatla
+				Test Description : Search Health Queries With vaild Data.
+			 */
+			
+			
+		loginPage = new LoginPage(driver);
+		loginPage.LoginButtoOfProfileAndSignup();
+		loginPage.enterMobileNumber(mobileNumber);
+		loginPage.enterPassword(password);
+		loginPage.clickOnLoginButton();
+		Assert.assertEquals(loginPage.getNameOfUser(),"Atul Maurya");
 	}
-
-
+}
